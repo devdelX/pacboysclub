@@ -36,9 +36,13 @@
 
 .header {
     margin: 0;
-    font-size: 50px;
+    font-size: 60px;
     font-weight: bold;
+    font-family: 'Share Tech Mono', monospace;
+    text-shadow: -3px 7px 0 #000a, 0 0 10px #11A7E0;
+
 }
+
 
 .sub-text {
     font-size: 25px;
@@ -62,6 +66,8 @@
     font-size: 16px;
     font-weight: bold;
 }
+
+
 
 .connect-wallet-button {
     color: white;
@@ -150,4 +156,3 @@
         background-position: 0% 50%;
     }
 }
-
