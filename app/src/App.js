@@ -63,7 +63,22 @@ const App = () => {
 
     return (
         <div className="App">
-            <div className="container">
+                <div className="container">  
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">WHITEPAPER<span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">TEAM</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">HOME</a>
+      </li>
+    </ul>
+  </div>
+</nav>
                 <div className="header-container">
                     <p className="header">PacBoys Club</p>
                     <p className="sub-text">Mint your NFT now!</p>
@@ -73,7 +88,7 @@ const App = () => {
                 {walletAddress && <CandyMachine walletAddress={window.solana} />}
                 <div className="footer-container">
                     <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
-                    <a className="footer-text" href={TWITTER_LINK} target="_blank" rel="noreferrer">{`built on @${TWITTER_HANDLE}`}</a>
+                    <a className="footer-text" href={TWITTER_LINK} target="_blank" rel="noreferrer">{`${TWITTER_HANDLE}`}</a>
                 </div>
             </div>
         </div>

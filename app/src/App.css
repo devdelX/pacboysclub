@@ -40,12 +40,13 @@
     font-weight: bold;
     font-family: 'Share Tech Mono', monospace;
     text-shadow: -3px 7px 0 #000a, 0 0 10px #11A7E0;
-
 }
 
 
 .sub-text {
     font-size: 25px;
+    font-family: 'IBM Plex Mono', monospace;
+    text-shadow: 2px 2px #787878;
 }
 
 .gradient-text {
@@ -71,13 +72,13 @@
 
 .connect-wallet-button {
     color: white;
-    background: -webkit-linear-gradient(left, #ff8867, #ff52ff);
+    background: -webkit-linear-gradient(left, #31ddd4, #00978f);
     background-size: 200% 200%;
-    animation: gradient-animation 4s ease infinite;
+    animation: gradient-animation 2s ease infinite;
 }
 
 .mint-button {
-    background: -webkit-linear-gradient(left, #4e44ce, #35aee2);
+    background: -webkit-linear-gradient(left, #31ddd4, #00978f);
     background-size: 200% 200%;
     animation: gradient-animation 4s ease infinite;
     margin-left: 10px;
@@ -156,3 +157,45 @@
         background-position: 0% 50%;
     }
 }
+
+
+/* Navbar */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* background-color: rgb(135, 135, 135); */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    align-items: center;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(3px);
+  }
+
+  ul li {
+    margin-top: -10px;
+    font-size: 25px;
+    font-family: 'Share Tech Mono', monospace;
+  }
+  
+  li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: #4cece4;
+    text-align: center;
+    padding: 14px 26px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    color: white;
+  }
