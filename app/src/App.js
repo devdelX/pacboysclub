@@ -80,8 +80,8 @@ const App = () => {
   </div>
 </nav>
                 <div className="header-container">
-                    <p className="header">PacBoys Club</p>
-                    <p className="sub-text">Mint your NFT now!</p>
+                    <p className="header">PACBOYS CLUB</p>
+                    <p className="sub-text">Coming Soooon!</p>
                     {/* Render your connect to wallet button right here */}
                     {!walletAddress && renderNotConnectedContainer()}
                 </div>

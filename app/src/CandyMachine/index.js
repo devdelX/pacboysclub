@@ -28,14 +28,20 @@ const CandyMachine = ({ walletAddress }) => {
         return await web3.PublicKey.findProgramAddress([Buffer.from("candy_machine"), candyMachineID.toBuffer()], candyMachineProgram);
     };
 
-    const getMetadata = async (mint) => {
-        return (
-            await PublicKey.findProgramAddress(
-                [Buffer.from("metadata"), TOKEN_METADATA_PROGRAM_ID.toBuffer(), mint.toBuffer()],
-                TOKEN_METADATA_PROGRAM_ID
-            )
-        )[0];
-    };
+    //the action for the mint button
+
+    // const getMetadata = async (mint) => {
+    //     return (
+    //         await PublicKey.findProgramAddress(
+    //             [Buffer.from("metadata"), TOKEN_METADATA_PROGRAM_ID.toBuffer(), mint.toBuffer()],
+    //             TOKEN_METADATA_PROGRAM_ID
+    //         )
+    //     )[0];
+    // };
+
+    const shoot = () => {
+        alert("Stay Tuned FAM, PacBoys are coming!");
+      }
 
     const getMasterEdition = async (mint) => {
         return (
@@ -191,7 +197,7 @@ const CandyMachine = ({ walletAddress }) => {
                 Token.createRevokeInstruction(TOKEN_PROGRAM_ID, userPayingAccountAddress, walletAddress.publicKey, [])
             );
         }
-        const metadataAddress = await getMetadata(mint.publicKey);
+        // const metadataAddress = await getMetadata(mint.publicKey);
         const masterEdition = await getMasterEdition(mint.publicKey);
 
         const [candyMachineCreator, creatorBump] = await getCandyMachineCreator(candyMachineAddress);
@@ -204,7 +210,7 @@ const CandyMachine = ({ walletAddress }) => {
                     payer: walletAddress.publicKey,
                     wallet: candyMachine.state.treasury,
                     mint: mint.publicKey,
-                    metadata: metadataAddress,
+                    // metadata: metadataAddress,
                     masterEdition,
                     mintAuthority: walletAddress.publicKey,
                     updateAuthority: walletAddress.publicKey,
@@ -270,7 +276,7 @@ const CandyMachine = ({ walletAddress }) => {
             (!candyMachine.data.goLiveDate || candyMachine.data.goLiveDate.toNumber() > new Date().getTime() / 1000);
         // We will be using this later in our UI so let's generate this now
         // const goLiveDateTimeString = `${new Date(goLiveData * 1000).toGMTString()}`;
-        const goLiveDateTimeString = `${new Date(goLiveData * 1000).toLocaleDateString()} @ ${new Date(
+        const goLiveDateTimeString = `${new Date(goLiveData * 1035).toLocaleDateString()} - ${new Date(
             goLiveData * 1000
         ).toLocaleTimeString()}`;
         setCandyMachine({
@@ -317,7 +323,7 @@ const CandyMachine = ({ walletAddress }) => {
             <div className="machine-container">
                 <p>{`Drop Date: ${candyMachine.state.goLiveDateTimeString}`}</p>
                 <p>{`Items Minted: ${candyMachine.state.itemsRedeemed} / ${candyMachine.state.itemsAvailable}`}</p>
-                <button className="cta-button mint-button" onClick={mintToken}>
+                <button className="cta-button mint-button" onClick={shoot}>
                     Mint NFT
                 </button>
             </div>
