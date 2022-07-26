@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import twitterLogo from "./assets/twitter-logo.svg";
+import discordLogo from "./assets/discord-logo.svg";
 import CandyMachine from "./CandyMachine";
 
 // Constants
 const TWITTER_HANDLE = "PacBoysclub";
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
+const DISCORD_HANDLE = "Join the community";
+const DISCORD_LINK = "https://discord.gg/AWEACE2Z";
 
 const App = () => {
     // Actions
@@ -68,13 +71,13 @@ const App = () => {
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">WHITEPAPER<span class="sr-only"></span></a>
+        <a class="nav-link" href="#">HOME<span class="sr-only"></span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">TEAM</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">HOME</a>
+        <a class="nav-link" href="https://abdelhadi-elouarguli.gitbook.io/pacboys-club/" target="_blank">WHITEPAPER</a>
       </li>
     </ul>
   </div>
@@ -89,6 +92,9 @@ const App = () => {
                 <div className="footer-container">
                     <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
                     <a className="footer-text" href={TWITTER_LINK} target="_blank" rel="noreferrer">{`${TWITTER_HANDLE}`}</a>
+
+                    <img alt="Discord Logo" className="discord-logo" src={discordLogo} />
+                    <a className="footer-text" href={DISCORD_LINK} target="_blank" rel="noreferrer">{`${DISCORD_HANDLE}`}</a>
                 </div>
             </div>
         </div>
