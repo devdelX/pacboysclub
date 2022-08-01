@@ -74,10 +74,13 @@ const App = () => {
         <a class="nav-link" href="#">HOME<span class="sr-only"></span></a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="#">ROADMAP</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="#">TEAM</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="https://abdelhadi-elouarguli.gitbook.io/pacboys-club/" target="_blank">WHITEPAPER</a>
+        <a class="nav-link" href="#" >GAME</a>
       </li>
     </ul>
   </div>

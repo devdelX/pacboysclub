@@ -192,6 +192,7 @@ p {
     /* margin-top: -10px; */
     font-size: 25px;
     font-family: 'Share Tech Mono', monospace;
+    font-weight: 700;
   }
   
   li {
@@ -200,12 +201,21 @@ p {
   
   li a {
     display: block;
-    color: #4cece4;
+    color: white;
     padding: 7px 26px;
     text-decoration: none;
   }
   
   /* Change the link color to #111 (black) on hover */
   li a:hover {
-    color: white;
+    color: #4cece4;
+  }
+
+
+  .enableBlur>* {
+    filter: blur(1.2px);
+  }
+  
+  .disableBlur {
+    filter: blur(0);
   }
